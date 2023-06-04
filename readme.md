@@ -1,9 +1,9 @@
 Ce projet utilise Python et MySQL
 
 md5sum des scripts pertinents:
-77d2b171693857522cc01484e870da03  dbsetup.sql
-4e7b00c6770df76306381163e3ee4f20  API.py
-adac5281d35a0160cc1c7be34e827dd0  utilities.py
+- 77d2b171693857522cc01484e870da03  dbsetup.sql
+- 4e7b00c6770df76306381163e3ee4f20  API.py
+- adac5281d35a0160cc1c7be34e827dd0  utilities.py
 
 
 Prérequis pour python:
