@@ -35,8 +35,6 @@
                 let response = await fetch(url)
                 let data = await response.json()
 
-                // alert("This is a test " + this.value)
-                // alert(data[0])
 
                 var copyrightPrice = data[0]
                 document.getElementById('gamePrice').innerHTML = 'Base game price: ' +copyrightPrice
@@ -53,21 +51,6 @@
 
             }
             }
-
-
-
-        //     const selected_Game = event.target.value
-        //     alert(selected_Game)
-        //
-        //
-        //     const price = document.getElementsByClassName('.nameOfTheGame"');
-        //     price.addEventListener('change', async () =>{
-        //         alert("H")
-        //         await showPrice(selected_Game)
-        // });
-            // let url='/api/'+ game + '/price'
-            // let response = await fetch(url)
-            // let data = await response.json()
         }
 
         async function addAllGames(){
@@ -86,7 +69,6 @@
                 await showPrice()
             }
 
-            // Login button functionality TODO CHANGE IT TO HTML
         const loginBtn = document.querySelector('.login-btn');
         loginBtn.addEventListener('click', () => {
             window.location.href = 'login.html';

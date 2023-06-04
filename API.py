@@ -11,15 +11,10 @@ app.config['SESSION_TYPE'] = 'filesystem'
 @app.route("/", methods=['GET'])
 def homeTest():
     return render_template("index.html")
-    #
 
-
-# result = getGames(connection, cursor)
-# return jsonify(result)
 
 
 @app.route("/index", methods=['GET'])
-# @cross_origin(origin='*', headers=['Content-Type']) # * Only uncomment if you know what you are doing. GL
 def home():
     return render_template("index.html")
 
@@ -109,7 +104,6 @@ def getGamePrice(game):
     result = [getGamecopyright(gameid)]
     return result
 
-# return render_template("front.html") # * Renders the HTML page
 
 @app.route("/api/topup", methods=['GET', 'POST'])
 def topupBalance():
@@ -212,7 +206,7 @@ def delete_Reservation():
 # *################################*#
 
 
-# * Si le port 5000 ne marche pas, lancer sur port 8000
+# * TODO Si le port 5000 ne marche pas, lancer sur port 8000
 # if __name__ == "__main__":
 #    app.run(port=8000, debug=True)
 

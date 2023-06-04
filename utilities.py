@@ -10,9 +10,9 @@ connection = connector.connect(
     host="localhost",
     port=3306,
     user="root",
-    password="root",  # empty for Will /TODO Change if doesn't work
+    password="root",
     database = database
-    # for Will it's  was "bd_proj" For Georg it's "Project"             /This is for testing"testingFlask", change if shit fucks up
+
 )
 
 MAX_HOUR = 8
@@ -345,7 +345,7 @@ def deleteSession(sessionid):
     dbquery(query, "DELETE")
     return 
 
-# Web Session related helper functions:
+# * Web Session related helper functions:
 def setWebSession(session, userid):
     session['userid'] = userid
 
