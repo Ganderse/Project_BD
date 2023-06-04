@@ -166,17 +166,17 @@ def newReservation():
      
     if verifyUsertime(userid, usertime) == False:
         message = f"You cannot exceed the {getMaxhour()} hours play time" 
-        return error(message)
+        return error(message, "reservation")
 
     if (price > getUserBalance(userid)):
         message = f"Your balance is too low"
-        return error(message)
+        return error(message, "reservation")
     print(getSessionid("Game", gameid))
     if getSessionid("Game", gameid) == None: 
         sessionid = newSession(gameid)
         if sessionid == None:
             message = "Error creating new session"
-            return error(message)
+            return error(message, "reservation")
         addReservation(sessionid, userid, usertime)
         removeUserCost(userid, price)
         return redirect("/dashboard")
