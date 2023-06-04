@@ -1,11 +1,8 @@
 from mysql import connector
-from socket import gethostname
-from datetime import date
 
 # * Database connection details
+
 database="NewProjectSchema"
-if gethostname() == "Entropy":
-    database = "bd_proj"
 connection = connector.connect(
     host="localhost",
     port=3306,
